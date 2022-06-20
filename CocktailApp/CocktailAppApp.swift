@@ -1,10 +1,3 @@
-//
-//  CocktailAppApp.swift
-//  CocktailApp
-//
-//  Created by Vytenis Petrauskas on 2022-06-20.
-//
-
 import SwiftUI
 
 @main
@@ -13,8 +6,7 @@ struct CocktailAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CoreDataView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CocktailsListView(viewModel: CocktailsListViewModel())
         }
     }
 }
