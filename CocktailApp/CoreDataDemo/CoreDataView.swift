@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CoreDataView.swift
 //  CocktailApp
 //
 //  Created by Vytenis Petrauskas on 2022-06-20.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct CoreDataView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -83,6 +83,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        CoreDataView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
