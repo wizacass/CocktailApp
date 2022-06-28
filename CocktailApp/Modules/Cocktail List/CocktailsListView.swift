@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CocktailsListView: View {
 
+    @EnvironmentObject var c: DIContainer
     @ObservedObject var viewModel: CocktailsListViewModel
 
     var body: some View {
@@ -27,6 +28,6 @@ struct CocktailsListView: View {
 
 struct CocktailsListView_Previews: PreviewProvider {
     static var previews: some View {
-        CocktailsListView(viewModel: CocktailsListViewModel())
+        CocktailsListView(viewModel: CocktailsListViewModel(Communicator()))
     }
 }

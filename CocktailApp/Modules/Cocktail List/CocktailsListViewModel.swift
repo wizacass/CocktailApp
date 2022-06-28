@@ -3,13 +3,16 @@ import Foundation
 class CocktailsListViewModel: ObservableObject {
     @Published var cocktails: [Cocktail] = []
 
-    init() { }
+    private let communicator: CommunicatorProtocol
+
+    init(_ communicator: CommunicatorProtocol) {
+        self.communicator = communicator
+    }
 
     @MainActor
     func retrieveCocktails() async {
-        let communicator = Communicator()
-
         let drinks = await communicator.getDrinks()
+        
         cocktails = transformDrinks(drinks)
     }
 
