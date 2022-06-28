@@ -18,6 +18,9 @@ struct CocktailsListView: View {
                 }
             }
             .navigationTitle("Cocktails")
+            .task {
+                await viewModel.retrieveCocktails()
+            }
         }
     }
 }

@@ -10,6 +10,9 @@
 		0B8D985C21FAFC65B58912AD /* Pods_CocktailApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBC1A8CCAF25A0EC6A8A05E /* Pods_CocktailApp.framework */; };
 		89840220049D60046FE24AED /* Pods_CocktailAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5275C0C9EBFA3E5EB7C0D669 /* Pods_CocktailAppTests.framework */; };
 		9B3DAC5589DE4D39375ED3A5 /* Pods_CocktailApp_CocktailAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977593E87E3213D433E3782C /* Pods_CocktailApp_CocktailAppUITests.framework */; };
+		A0272AEC286B75FB00B55F86 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0272AEB286B75FB00B55F86 /* Communicator.swift */; };
+		A0272AEE286B761400B55F86 /* DrinkDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0272AED286B761400B55F86 /* DrinkDto.swift */; };
+		A0272AF0286B763500B55F86 /* DrinksDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0272AEF286B763500B55F86 /* DrinksDto.swift */; };
 		A0843A662860EED0008826E0 /* CocktailAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0843A652860EED0008826E0 /* CocktailAppApp.swift */; };
 		A0843A682860EED0008826E0 /* CoreDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0843A672860EED0008826E0 /* CoreDataView.swift */; };
 		A0843A6A2860EED4008826E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0843A692860EED4008826E0 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		916214B501B6DC9F2BA9FD29 /* Pods-CocktailApp-CocktailAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailApp-CocktailAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CocktailApp-CocktailAppUITests/Pods-CocktailApp-CocktailAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		977593E87E3213D433E3782C /* Pods_CocktailApp_CocktailAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailApp_CocktailAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F338E60DE7AED84DD4FD401 /* Pods-CocktailApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailApp.debug.xcconfig"; path = "Target Support Files/Pods-CocktailApp/Pods-CocktailApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A0272AEB286B75FB00B55F86 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		A0272AED286B761400B55F86 /* DrinkDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDto.swift; sourceTree = "<group>"; };
+		A0272AEF286B763500B55F86 /* DrinksDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksDto.swift; sourceTree = "<group>"; };
 		A0843A622860EED0008826E0 /* CocktailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0843A652860EED0008826E0 /* CocktailAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAppApp.swift; sourceTree = "<group>"; };
 		A0843A672860EED0008826E0 /* CoreDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataView.swift; sourceTree = "<group>"; };
@@ -139,10 +145,11 @@
 		A0272AE9286B74E200B55F86 /* CocktailList */ = {
 			isa = PBXGroup;
 			children = (
-				A0843A9E2860F46F008826E0 /* CocktailsListViewModel.swift */,
-				A0843AA22860F70C008826E0 /* CocktailRowViewModel.swift */,
 				A0843A9C2860F3D6008826E0 /* CocktailsListView.swift */,
+				A0843A9E2860F46F008826E0 /* CocktailsListViewModel.swift */,
 				A0843AA42860F77D008826E0 /* CocktailRowView.swift */,
+				A0843AA22860F70C008826E0 /* CocktailRowViewModel.swift */,
+				A0843AA02860F4AF008826E0 /* Cocktail.swift */,
 			);
 			path = CocktailList;
 			sourceTree = "<group>";
@@ -231,7 +238,8 @@
 		A0843A952860F241008826E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A0843AA02860F4AF008826E0 /* Cocktail.swift */,
+				A0272AED286B761400B55F86 /* DrinkDto.swift */,
+				A0272AEF286B763500B55F86 /* DrinksDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 		A0843A972860F251008826E0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A0272AEB286B75FB00B55F86 /* Communicator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 				A0843A5E2860EED0008826E0 /* Sources */,
 				A0843A5F2860EED0008826E0 /* Frameworks */,
 				A0843A602860EED0008826E0 /* Resources */,
+				12DDE7F878877AF7B8B425C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +308,7 @@
 				A0843A7D2860EED4008826E0 /* Sources */,
 				A0843A7E2860EED4008826E0 /* Frameworks */,
 				A0843A7F2860EED4008826E0 /* Resources */,
+				B0EAD52A0413E935EC8241B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,6 +390,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12DDE7F878877AF7B8B425C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailApp/Pods-CocktailApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailApp/Pods-CocktailApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocktailApp/Pods-CocktailApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		19396AB8F05D56BC2E0F7407 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +451,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B0EAD52A0413E935EC8241B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailApp-CocktailAppUITests/Pods-CocktailApp-CocktailAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailApp-CocktailAppUITests/Pods-CocktailApp-CocktailAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocktailApp-CocktailAppUITests/Pods-CocktailApp-CocktailAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DD60105AC01180833B311B87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,6 +503,9 @@
 				A0843A6F2860EED4008826E0 /* Persistence.swift in Sources */,
 				A0843AA72860F997008826E0 /* CocktailDetailView.swift in Sources */,
 				A0843A682860EED0008826E0 /* CoreDataView.swift in Sources */,
+				A0272AF0286B763500B55F86 /* DrinksDto.swift in Sources */,
+				A0272AEC286B75FB00B55F86 /* Communicator.swift in Sources */,
+				A0272AEE286B761400B55F86 /* DrinkDto.swift in Sources */,
 				A0843AA32860F70C008826E0 /* CocktailRowViewModel.swift in Sources */,
 				A0843A662860EED0008826E0 /* CocktailAppApp.swift in Sources */,
 				A0843A722860EED4008826E0 /* CocktailApp.xcdatamodeld in Sources */,
