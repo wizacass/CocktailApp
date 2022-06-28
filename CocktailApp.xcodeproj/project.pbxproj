@@ -127,6 +127,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A0272AE8286B74CE00B55F86 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A0272AEA286B74F400B55F86 /* CocktailDetail */,
+				A0272AE9286B74E200B55F86 /* CocktailList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A0272AE9286B74E200B55F86 /* CocktailList */ = {
+			isa = PBXGroup;
+			children = (
+				A0843A9E2860F46F008826E0 /* CocktailsListViewModel.swift */,
+				A0843AA22860F70C008826E0 /* CocktailRowViewModel.swift */,
+				A0843A9C2860F3D6008826E0 /* CocktailsListView.swift */,
+				A0843AA42860F77D008826E0 /* CocktailRowView.swift */,
+			);
+			path = CocktailList;
+			sourceTree = "<group>";
+		};
+		A0272AEA286B74F400B55F86 /* CocktailDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A0843AA828610813008826E0 /* CocktailDetailViewModel.swift */,
+				A0843AA62860F997008826E0 /* CocktailDetailView.swift */,
+			);
+			path = CocktailDetail;
+			sourceTree = "<group>";
+		};
 		A0843A592860EED0008826E0 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +183,7 @@
 			children = (
 				A0843A972860F251008826E0 /* Services */,
 				A0843A952860F241008826E0 /* Models */,
-				A0843A962860F247008826E0 /* ViewModels */,
+				A0272AE8286B74CE00B55F86 /* Modules */,
 				A0843A982860F258008826E0 /* UI */,
 				A0843A942860F223008826E0 /* CoreDataDemo */,
 				A0843A652860EED0008826E0 /* CocktailAppApp.swift */,
@@ -207,16 +236,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A0843A962860F247008826E0 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				A0843A9E2860F46F008826E0 /* CocktailsListViewModel.swift */,
-				A0843AA22860F70C008826E0 /* CocktailRowViewModel.swift */,
-				A0843AA828610813008826E0 /* CocktailDetailViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		A0843A972860F251008826E0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,9 +246,6 @@
 		A0843A982860F258008826E0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A0843A9C2860F3D6008826E0 /* CocktailsListView.swift */,
-				A0843AA42860F77D008826E0 /* CocktailRowView.swift */,
-				A0843AA62860F997008826E0 /* CocktailDetailView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
