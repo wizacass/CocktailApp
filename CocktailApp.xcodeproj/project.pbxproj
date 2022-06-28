@@ -136,13 +136,13 @@
 		A0272AE8286B74CE00B55F86 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A0272AEA286B74F400B55F86 /* CocktailDetail */,
-				A0272AE9286B74E200B55F86 /* CocktailList */,
+				A0272AEA286B74F400B55F86 /* Cocktail Detail */,
+				A0272AE9286B74E200B55F86 /* Cocktail List */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		A0272AE9286B74E200B55F86 /* CocktailList */ = {
+		A0272AE9286B74E200B55F86 /* Cocktail List */ = {
 			isa = PBXGroup;
 			children = (
 				A0843A9C2860F3D6008826E0 /* CocktailsListView.swift */,
@@ -151,16 +151,31 @@
 				A0843AA22860F70C008826E0 /* CocktailRowViewModel.swift */,
 				A0843AA02860F4AF008826E0 /* Cocktail.swift */,
 			);
-			path = CocktailList;
+			path = "Cocktail List";
 			sourceTree = "<group>";
 		};
-		A0272AEA286B74F400B55F86 /* CocktailDetail */ = {
+		A0272AEA286B74F400B55F86 /* Cocktail Detail */ = {
 			isa = PBXGroup;
 			children = (
 				A0843AA828610813008826E0 /* CocktailDetailViewModel.swift */,
 				A0843AA62860F997008826E0 /* CocktailDetailView.swift */,
 			);
-			path = CocktailDetail;
+			path = "Cocktail Detail";
+			sourceTree = "<group>";
+		};
+		A0272AF1286B9B8000B55F86 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		A0272AF2286B9B8D00B55F86 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0272AEB286B75FB00B55F86 /* Communicator.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		A0843A592860EED0008826E0 = {
@@ -247,7 +262,8 @@
 		A0843A972860F251008826E0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A0272AEB286B75FB00B55F86 /* Communicator.swift */,
+				A0272AF1286B9B8000B55F86 /* Dependency Injection */,
+				A0272AF2286B9B8D00B55F86 /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
