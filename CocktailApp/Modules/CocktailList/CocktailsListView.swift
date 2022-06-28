@@ -1,0 +1,29 @@
+import SwiftUI
+
+struct CocktailsListView: View {
+
+    @ObservedObject var viewModel: CocktailsListViewModel
+
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(viewModel.cocktails) { cocktail in
+                    NavigationLink(destination: CocktailDetailView(
+                        viewModel: CocktailDetailViewModel(cocktail.name)
+                    )) {
+                        CocktailRowView(
+                            viewModel: CocktailRowViewModel(cocktail)
+                        )
+                    }
+                }
+            }
+            .navigationTitle("Cocktails")
+        }
+    }
+}
+
+struct CocktailsListView_Previews: PreviewProvider {
+    static var previews: some View {
+        CocktailsListView(viewModel: CocktailsListViewModel())
+    }
+}
