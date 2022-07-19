@@ -1,5 +1,5 @@
 import Foundation
 
-protocol CommunicatorProtocol {
+public protocol CommunicatorProtocol {
     func getDrinks() async -> DrinksDto?
 }
