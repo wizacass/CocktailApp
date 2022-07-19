@@ -9,6 +9,6 @@ class Bootstrapper {
 
         let cocktailsListViewModel = CocktailsListViewModel(communicator)
 
-        return DIContainer(cocktailsListViewModel)
+        return DIContainer(communicator, cocktailsListViewModel)
     }
 }

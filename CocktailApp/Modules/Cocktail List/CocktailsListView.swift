@@ -10,7 +10,7 @@ struct CocktailsListView: View {
             List {
                 ForEach(viewModel.cocktails) { cocktail in
                     NavigationLink(destination: CocktailDetailView(
-                        viewModel: CocktailDetailViewModel(cocktail.name)
+                        viewModel: CocktailDetailViewModel(c.communicator, cocktail)
                     )) {
                         CocktailRowView(
                             viewModel: CocktailRowViewModel(cocktail)
