@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
-class Communicator {
+class Communicator: CommunicatorProtocol {
 
     private let apiUrl = "https://thecocktaildb.com/api/json/v1/1"
 
